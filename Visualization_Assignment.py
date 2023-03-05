@@ -7,15 +7,15 @@ Created on Tue Feb 28 17:35:24 2023
 """
 
 # Import-libraries
-import matplotlib.pyplot as plt
-
 import pandas as pd
+
+import matplotlib.pyplot as plt
 
 
 # Load fuel_exports data into Pandas DataFrame
 def load_export_data(countries):
 
-    """The function loads export data which is a proportion of merchandise
+    """The function loads export data which is a % of merchandise
     exports from the World Bank Dataset
 
     Keyword Argument:
@@ -56,8 +56,8 @@ export_df = load_export_data(countries)
 
 def lineplot_export(countries):
 
-    """ This function generates a line plot illustrating the fuel exports
-    of six countries from 2012 to 2021.
+    """The function creates a graph in the form of a line chart that shows the
+    fuel export data of six different countries over the years 2012 to 2021
 
     Keyword Argument:
     countries (list): List of countries for the study.
@@ -93,14 +93,17 @@ def lineplot_export(countries):
 
 # Generating data for Pie chart
 export_2012 = export_df.iloc[:,[0,1]]
+print(export_2012)
+
 export_2021 = export_df.iloc[:,[0,10]]
+print(export_2021)
 
 def pie_chart(export_2012, export_2021):
 
-    """ function creates a pie chart that displays the percentage of each
-    country's fuel exports in relation to the world's total fuel exports.
+    """ The function generates a pie chart that presents the % of each
+    country's fuel exports in relation to the total fuel exports.
 
-    keyword Argument:export_2012:A data frame comprising the names of countries and their
+    Keyword Argument:export_2012:A data frame comprising the names of countries and their
     respective fuel export quantities for the year 2021.
     export_2021: A data frame comprising the names of countries and their
     respective fuel export quantities for the year 2021.
@@ -129,10 +132,10 @@ def pie_chart(export_2012, export_2021):
 
 def bar_chart(angola_data):
 
-    """ This is a function that produce a bar chart of Angola's fuel
-    exports from 2012 to 2021
+    """ The function generates a bar chart that represents fuel exports OF Angola
+    data over the period between 2012 and 2021.
 
-    keyword Argument:angola_data:a dataframe showing Angola's exports from 2012 to 2021
+    Keyword Argument:angola_data:a dataframe showing Angola's exports from 2012 to 2021
 
     Return: A bar chart showing Angola's fuel exports from 2012 to 2022.
 
